@@ -15,7 +15,6 @@ This addon provides:
     """,
     "author": "thetzin",
     "license": "LGPL-3",
-    "support": "support@example.com",
     "images": [
         "static/description/icon.png",
         "static/description/banner.png",
