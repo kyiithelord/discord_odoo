@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_discord" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.discord</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Discord" name="discord_odoo">
+                    <block title="Discord Integration">
+                        <setting type="header" string="Enable Discord Integration" help="Enable Discord notifications for opt-in models that inherit the Discord mixin.">
+                            <field name="discord_enabled"/>
+                        </setting>
+                        <setting string="Discord Webhook" help="Paste the Discord webhook URL generated from your Discord channel.">
+                            <field name="discord_webhook_url" placeholder="https://discord.com/api/webhooks/..."/>
+                        </setting>
+                        <setting string="Discord Username" help="Name shown as the webhook author in Discord.">
+                            <field name="discord_username" placeholder="Odoo"/>
+                        </setting>
+                        <setting string="Discord Avatar URL" help="Optional avatar image URL for webhook messages.">
+                            <field name="discord_avatar_url" placeholder="https://example.com/avatar.png"/>
+                        </setting>
+                        <setting string="Test Webhook" help="Send a test message to make sure the integration works.">
+                            <button name="action_test_discord_webhook"
+                                    type="object"
+                                    string="Send Test Message"
+                                    class="btn btn-primary"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
