@@ -30,7 +30,10 @@
         .discord-hero img {
             display: block;
             width: 100%;
+            max-width: 100%;
             height: auto;
+            max-height: 420px;
+            object-fit: cover;
         }
         .discord-hero-content {
             padding: 28px 24px 8px;
@@ -126,7 +129,7 @@
 <body>
     <div class="discord-app-wrap">
         <div class="discord-hero">
-            <img src="banner.png" alt="Discord Odoo Integration banner"/>
+            <img src="banner.png" alt="Discord Odoo Integration banner" style="display:block;width:100%;max-width:100%;height:auto;max-height:420px;object-fit:cover;"/>
             <div class="discord-hero-content">
                 <span class="discord-badge">Odoo 19.0</span>
                 <h1>Discord Odoo Integration</h1>
